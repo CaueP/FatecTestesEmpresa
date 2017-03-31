@@ -13,12 +13,29 @@ import br.sceweb.modelo.EmpresaDAO;
 
 /**
  * Servlet implementation class ServletControle
+ * @author Caue Polimanti
+ * @version 1.0
  */
 public class ServletControle extends HttpServlet {
+	/**
+	 * Versao ID
+	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * mecanismo de Log
+	 */
 	Logger logger = Logger.getLogger(ServletControle.class);
+	/**
+	 * mensagem de retorno da interface web
+	 */
 	String mensagem = "";
+	/**
+	 * DAO da Empresa
+	 */
 	EmpresaDAO empresaDAO;
+	/**
+	 * cnpj de referência da empresa
+	 */
 	String cnpjParaExclusao = "";// seta o cnpj para exclusao
 
 	/**
@@ -47,7 +64,14 @@ public class ServletControle extends HttpServlet {
 		request.setAttribute("erro", null);
 		executaComando(request, response);
 	}
-
+	
+	/**
+	 * Identifica e executa o comando capturado da interface web
+	 * @param request
+	 * @param response
+	 * @throws ServletException
+	 * @throws IOException
+	 */
 	protected void executaComando(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String parametro = request.getParameter("acao");
@@ -75,6 +99,15 @@ public class ServletControle extends HttpServlet {
 
 	}
 
+	/**
+	 * Realiza o cadastro da empresa de acordo com os valores preenchidos na web interface
+	 * @param cnpj
+	 * @param nomeDaEmpresa
+	 * @param nomeFantasia
+	 * @param endereco
+	 * @param telefone
+	 * @return
+	 */
 	public String cadastrarEmpresa(String cnpj, String nomeDaEmpresa, String nomeFantasia, String endereco,
 			String telefone) {
 		String msg = "";
@@ -97,7 +130,11 @@ public class ServletControle extends HttpServlet {
 	}
 
 	
-
+	/**
+	 * Realiza a exclusão da empresa através do número de cnpj capturado na interface web
+	 * @param cnpj
+	 * @return
+	 */
 	public String excluirEmpresa(String cnpj) {
 		String msg = "";
 		EmpresaDAO empresaDAO = new EmpresaDAO();

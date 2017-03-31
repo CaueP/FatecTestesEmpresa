@@ -3,6 +3,11 @@ package br.sceweb.modelo;
 
 import java.util.InputMismatchException;
 
+/**
+ * Classe que define a entidade Empresa
+ * @author Caue Polimanti
+ * @version 1.0
+ */
 public class Empresa {
 	private String cnpj;
 	private String nomeDaEmpresa;

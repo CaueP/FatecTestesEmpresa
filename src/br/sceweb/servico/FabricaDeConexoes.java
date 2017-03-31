@@ -7,6 +7,12 @@ import org.apache.log4j.Logger;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.exceptions.jdbc4.CommunicationsException;
 
+/**
+ * Fabrica para gerar as conexões com o Banco de Dados MySQL
+ * @author Caue Polimanti
+ * @version 1.0
+ *
+ */
 public class FabricaDeConexoes {
 	Logger logger = Logger.getLogger(FabricaDeConexoes.class);
 	public Connection getConnection(){
