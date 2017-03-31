@@ -12,6 +12,11 @@ import br.sceweb.servico.FabricaDeConexoes;
 
 public class EmpresaDAO {
 	
+	/**
+	 * Adiciona empresa passando um objeto tipo Empresa
+	 * @param empresa
+	 * @return
+	 */
 	public int adiciona(Empresa empresa){
 		PreparedStatement ps;
 		int codigoRetorno = 0;
