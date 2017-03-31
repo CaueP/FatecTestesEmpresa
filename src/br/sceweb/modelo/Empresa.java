@@ -9,10 +9,25 @@ import java.util.InputMismatchException;
  * @version 1.0
  */
 public class Empresa {
+	/**
+	 * Cnpj da empresa
+	 */
 	private String cnpj;
+	/**
+	 * nome da empresa
+	 */
 	private String nomeDaEmpresa;
+	/**
+	 * nome fantasia da empresa
+	 */
 	private String nomeFantasia;
+	/**
+	 * endereço da empresa
+	 */
 	private String endereco;
+	/**
+	 * telefone da empresa
+	 */
 	private String telefone;
 	
 

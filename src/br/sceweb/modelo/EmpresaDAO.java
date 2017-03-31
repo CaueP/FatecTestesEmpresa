@@ -10,6 +10,11 @@ import com.mysql.jdbc.PreparedStatement;
 
 import br.sceweb.servico.FabricaDeConexoes;
 
+/**
+ * Objeto para acesso aos dados da Empresa no banco de dados
+ * @author cgpolim
+ *
+ */
 public class EmpresaDAO {
 	
 	/**

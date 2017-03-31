@@ -14,6 +14,9 @@ import com.mysql.jdbc.exceptions.jdbc4.CommunicationsException;
  *
  */
 public class FabricaDeConexoes {
+	/**
+	 * Objeto de log
+	 */
 	Logger logger = Logger.getLogger(FabricaDeConexoes.class);
 	public Connection getConnection(){
 		String url = "jdbc:mysql://localhost/sceweb";

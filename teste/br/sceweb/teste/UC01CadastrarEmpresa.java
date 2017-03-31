@@ -13,10 +13,17 @@ import br.sceweb.modelo.EmpresaDAO;
 /**
  * Objetivo: Validar o cadastro de Empresas no Banco de Dados
  * @author Caue Polimanti
+ * @version 1.0
  *
  */
 public class UC01CadastrarEmpresa {
+	/*
+	 * objeto empresa que sera utilizado nos testes
+	 */
 	public static Empresa empresa;
+	/**
+	 * DAO que sera utilizado nos testes
+	 */
 	public static EmpresaDAO empresaDAO;
 	
 	/**
